@@ -1,0 +1,35 @@
+name: Build on Tag
+
+on:
+  push:
+    tags: '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout kernel source
+      uses: actions/checkout@v2
+
+    - name: Checkout zipper
+      uses: actions/checkout@v2
+      with:
+        repository: mmdlsu/AnyKernel3@master
+        path: zipper
+
+    - name: Android kernel build
+      uses: mmdlsu/android_kernel_xiaomi_sm8250@main
+      id: build
+      env:
+        NAME: cas-nethunter
+      with:
+        arch: arm64
+        compiler: clang/16
+        defconfig: cas_user__defconfig
+        image: Image.gz-dtb
+
+    - name: Release build
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: ${{ steps.build.outputs.outfile }}
+        token: ${{ secrets.PRESS_TOKEN }}
