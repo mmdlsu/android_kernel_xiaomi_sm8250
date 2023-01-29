@@ -1,6 +1,6 @@
 name: Android Kernel Action
 description: Build android kernel with GitHub Action
-author:  starsea <mmdlsu@163.com>
+author: Syahrial Agni Prasetya <lemniskett@protonmail.com>
 branding:
   icon: box
   color: green
