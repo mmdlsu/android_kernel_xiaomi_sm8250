@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout kernel source
-      uses: actions/checkout@v2
+      uses: actions/checkout@main
 
     - name: Checkout zipper
-      uses: actions/checkout@v2
+      uses: actions/checkout@main
       with:
         repository: lemniskett/AnyKernel3
         path: zipper
