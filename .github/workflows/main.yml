@@ -29,7 +29,7 @@ jobs:
         image: Image.gz-dtb
 
     - name: Release build
-      uses: mmdlsu/android_kernel_xiaomi_sm8250@v1
+      uses: ncipollo/release-action@v1
       with:
         artifacts: ${{ steps.build.outputs.outfile }}
         token: ${{ secrets.PRESS_TOKEN }}
