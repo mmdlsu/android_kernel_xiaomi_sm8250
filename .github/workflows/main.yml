@@ -14,11 +14,11 @@ jobs:
     - name: Checkout zipper
       uses: actions/checkout@v2
       with:
-        repository: lemniskett/AnyKernel3
+        repository: mmdlsu/AnyKernel3@master
         path: zipper
 
     - name: Android kernel build
-      uses: mmdlsu/android_kernel_xiaomi_sm8250@arrow-12.0
+      uses: mmdlsu/android_kernel_xiaomi_sm8250@main
       id: build
       env:
         NAME: cas-nethunter
