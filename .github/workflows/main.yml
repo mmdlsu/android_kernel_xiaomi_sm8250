@@ -29,7 +29,7 @@ jobs:
         image: Image.gz-dtb
 
     - name: Release build
-      uses: ncipollo/release-action@v1
+      uses: ncipollo/release-action@main
       with:
         artifacts: ${{ steps.build.outputs.outfile }}
         token: ${{ secrets.PRESS_TOKEN }}
