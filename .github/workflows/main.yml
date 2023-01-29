@@ -24,7 +24,7 @@ jobs:
         NAME: cas-nethunter
       with:
         arch: arm64
-        compiler: clang/11
+        compiler: aosp-clang/android12-release/clang-r416183b/binutils
         defconfig: cas_user__defconfig
         image: Image.gz-dtb
 
