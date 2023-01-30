@@ -24,7 +24,7 @@ jobs:
         NAME: cas-nethunter
       with:
         arch: arm64
-        compiler: clang/11
+        compiler: clang/15
         defconfig: nethunter_defconfig
         image: Image.gz-dtb
 
